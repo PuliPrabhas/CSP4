@@ -1,0 +1,126 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(into.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    backdrop-filter: blur(6px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*Navbar */
+.navbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Cool Hover Effect */
+.navbar ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: cyan;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar ul li a.active {
+    color: cyan;
+}
+
+/* Header */
+header {
+    margin-top: 100px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, cyan, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Abstract Section */
+.abstract-content {
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.abstract-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+p:hover{
+    color: aqua;
+
+}

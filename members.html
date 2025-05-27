@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1d2b64, #f8cdda);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #f8cdda;
+      color: #000;
+    }
+
+    .highlight {
+      color: #ffcc00;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px 0;
+      gap: 24px;
+    }
+
+    .member {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px 30px;
+      text-align: center;
+      width: 220px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .member:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .member-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .member-role {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .team {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+            <li><a href="abstract.html">Abstract</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="questionnaire.html">Questionnaire</a></li>
+            <li><a href="survey.html">Survey Data</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+            <li><a href="Activitylog.html">Activity Log</a></li>
+            <li><a href="pictures.html">Survey Pictures</a></li>
+            <li><a href="members.html">Members</a></li>
+    </ul>
+  </nav>
+
+  <h1>Meet Our Team</h1>
+  <div class="team">
+    <div class="member">
+      <div class="member-name">SK Fazullah</div>
+      <div class="member-role">232U1A33A2</div>
+    </div>
+    <div class="member">
+      <div class="member-name">P Prabhas</div>
+      <div class="member-role">232U1A3390</div>
+    </div>
+    <div class="member">
+      <div class="member-name">P Nehanth</div>
+      <div class="member-role">232U1A3389</div>
+    </div>
+    <div class="member">
+      <div class="member-name">Sk Ali Hussain</div>
+      <div class="member-role">232U1A33B0</div>
+    </div>
+  </div>
+</body>
+</html>

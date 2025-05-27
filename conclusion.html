@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusion - Laptop Survey</title>
+    <link rel="stylesheet" href="conclusion.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="abstract.html">Abstract</a></li>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="questionnaire.html">Questionnaire</a></li>
+            <li><a href="survey.html">Survey Data</a></li>
+            <li><a href="conclusion.html" class="active">Conclusion</a></li>
+            <li><a href="Activitylog.html">Activity Log</a></li>
+            <li><a href="pictures.html">Survey Pictures</a></li>
+            <li><a href="members.html">Members</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conclusion Section -->
+    <section class="conclusion-container">
+        <div class="conclusion-card">
+            <h1>Conclusion</h1>
+            <p>
+                Based on our survey of 50 households, 35 people own laptops, while 15 do not.  
+                HP is the most popular brand, followed by Asus, Dell, and Lenovo.  
+                This indicates that reliability, affordability, and performance greatly influence consumer choices.
+            </p>
+        </div>
+
+        <!-- Animated Charts -->
+        <div class="chart-section">
+            <h2>Data Visualization</h2>
+            <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Conclusion Table -->
+        <div class="table-container">
+            <h2>Survey Summary</h2>
+            <table class="summary-table">
+                <tr>
+                    <th>Category</th>
+                    <th>Count</th>
+                </tr>
+                <tr><td>No of People Using Laptops</td><td>35</td></tr>
+                <tr><td>No of People Not Using Laptops</td><td>15</td></tr>
+            </table>
+        </div>
+
+        <!-- Final Conclusion -->
+        <div class="final-conclusion">
+            <p>
+                The survey highlights that most people prefer brands like HP and Asus due to their performance and affordability.  
+                Companies should focus on quality, customer service, and innovation to attract more users.
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript for Animated Charts -->
+    <script>
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['HP', 'Asus', 'Dell', 'Lenovo', 'Acer', 'Apple', 'Honor'],
+                datasets: [{
+                    data: [9, 7, 6, 6, 3, 3, 1],
+                    backgroundColor: ['#FF5733', '#36A2EB', '#FFCD56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'],
+                    hoverOffset: 8
+                }]
+            },
+            options: { animation: { animateScale: true } }
+        });
+
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['HP', 'Asus', 'Dell', 'Lenovo', 'Acer', 'Apple', 'Honor'],
+                datasets: [{
+                    label: 'Users',
+                    data: [9, 7, 6, 6, 3, 3, 1],
+                    backgroundColor: ['#FF5733', '#36A2EB', '#FFCD56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'],
+                    borderRadius: 5
+                }]
+            },
+            options: { animation: { duration: 2000 }, scales: { y: { beginAtZero: true } } }
+        });
+    </script>
+
+</body>
+</html>
